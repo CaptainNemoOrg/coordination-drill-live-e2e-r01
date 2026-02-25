@@ -1,16 +1,21 @@
-# Coordination Drill Live E2E R01
+# coordination-drill-live-e2e-r01
 
-Minimal Flask application for coordination drill testing.
+Coordination drill live e2e r01 - Node.js implementation with Express.
 
-## Endpoints
+## Running
 
-- `/` - Index endpoint
-- `/health` - Health check
+```bash
+pnpm install
+pnpm start
+```
 
 ## Testing
 
 ```bash
-pip install -r requirements.txt
-pytest
+pnpm test
 ```
-# coordination-drill-live-e2e-r01
+
+## Endpoints
+
+- `GET /` - Returns { status: "ok", service: "coordination-drill-live-e2e-r01" }
+- `GET /healthz` - Returns { ok: true, version: "1.0.0" }
